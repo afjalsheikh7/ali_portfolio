@@ -1,0 +1,20 @@
+Afjal Ali Sheikh
+Full Stack Developer (Portfolio Demo CV)
+
+Email: afjalalisheikh88@gmail.com
+WhatsApp: +977 9821035473
+
+ABOUT
+Passionate web developer focused on creating modern, responsive, and user-friendly websites. Interested in building useful digital products, learning technologies, and solving problems.
+
+SKILLS
+HTML5, CSS3, JavaScript, PHP, MySQL
+
+EXPERIENCE
+3+ years (replace with your accurate experience and project details before sending to employers)
+
+PROJECTS
+Add your project names, links, and short descriptions here.
+
+NOTE
+This is a temporary sample CV. Replace this file with your real CV before sharing your portfolio.

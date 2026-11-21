@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ali Sheikh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Space Grotesk', sans-serif; color: #f5f5f7; background: #080910; min-height: 100vh; }
+    body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 15% 15%, #6d28d933, transparent 35%), radial-gradient(circle at 85% 70%, #06b6d422, transparent 35%); }
+    nav, main, footer { position: relative; z-index: 1; }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(11,13,18,.83); backdrop-filter: blur(18px); border-bottom: 1px solid #ffffff12; }
+    .container { width: min(1140px, calc(100% - 48px)); margin: auto; }
+    .navbar { height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; }
+    .brand img { width: 70px; height: 40px; background: transparent; }
+    .nav-left { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+    .nav-link { font-size: 11px; color: #dfe8f5; font-weight: 600; text-decoration: none; background: rgba(16,20,31,.82); border: 1px solid #ffffff12; padding: 10px 15px; border-radius: 10px; transition: .25s; }
+    .nav-link:hover, .nav-link:focus-visible { color: #effcff; background: linear-gradient(110deg, rgba(25,216,255,.18), rgba(99,91,255,.2)); border-color: rgba(25,216,255,.55); transform: translateY(-2px); }
+    .nav-link.active { color: #fff; background: linear-gradient(110deg, #7c3aed, #06b6d4); border-color: rgba(255,255,255,.16); box-shadow: 0 4px 14px rgba(99,91,255,.2); }
+    .nav-link.active:hover { background: linear-gradient(110deg, #06b6d4, #7c3aed); }
+
+
+    main { max-width: 1100px; margin: auto; padding: 55px 22px 70px; }
+    .eyebrow { color: #22d3ee; text-transform: uppercase; letter-spacing: 3px; font-size: .78rem; margin-bottom: 12px; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; margin-bottom: 12px; }
+    h1 span { background: linear-gradient(90deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; color: transparent; }
+    .intro { color: #a7a7b6; margin-bottom: 35px; max-width: 560px; }
+    .contact-grid { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(420px, 1.25fr); gap: 24px; align-items: stretch; }
+    .panel { background: linear-gradient(145deg, rgba(20,22,34,.96), rgba(12,13,20,.96)); border: 1px solid #ffffff12; border-radius: 20px; padding: 28px; box-shadow: 0 20px 60px #0005; }
+    .profile { text-align: center; display: flex; flex-direction: column; }
+    .profile img { width: 280px; height: 280px; object-fit: cover; object-position: 50% 8%; transform: scale(1.08); border: 1px solid #ffffff18; border-radius: 50%; background: #11131d; margin: 4px auto 18px; display: block; box-shadow: 0 12px 35px #7c3aed30; }
+    .profile h2 { width: fit-content; margin: 0 auto 7px; font-family: 'Space Grotesk', sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(100deg, #19d8ff, #635bff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .profile p { color: #a7a7b6; font-size: .95rem; }
+    .contact-details { margin-top: 24px; text-align: left; }
+    .contact-detail { display: flex; gap: 12px; align-items: center; padding: 12px; margin-top: 8px; border: 1px solid #ffffff10; border-radius: 10px; color: #d5d5df; overflow-wrap: anywhere; background: #08091055; }
+    .contact-detail i { color: #22d3ee; width: 20px; text-align: center; }
+    form h2 { margin-bottom: 22px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 7px; color: #d7d7e2; font-size: .9rem; }
+    input, textarea, select { width: 100%; background: #080910; color: white; border: 1px solid #ffffff20; border-radius: 10px; padding: 13px 14px; font: inherit; outline: none; transition: .2s; }
+    input:focus, textarea:focus, select:focus { border-color: #22d3ee; box-shadow: 0 0 0 3px #22d3ee18; }
+    select { cursor: pointer; }
+    textarea { min-height: 130px; resize: vertical; }
+    .send-btn { border: 0; width: 100%; padding: 14px; border-radius: 10px; color: #fff; font: inherit; font-weight: 700; cursor: pointer; background: linear-gradient(90deg, #7c3aed, #06b6d4); transition: .25s; }
+    .send-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px #7c3aed44; }
+    .whatsapp-note { color: #9999aa; font-size: .8rem; margin-top: 10px; text-align: center; }
+    footer { border-top: 1px solid #ffffff12; background: #080a0e; padding: 28px 22px; color: #9999aa; }
+    .footer-content { width: min(1140px, calc(100% - 48px)); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer .brand { display: flex; align-items: center; }
+    footer .brand img { width: 70px; height: 40px; object-fit: contain; }
+    footer .email-link { font-size: 12px; color: #aab5c4; display: flex; align-items: center; gap: 9px; text-decoration: none; }
+    footer .email-link:hover { color: #19d8ff; }
+    footer p { font-size: 10px; color: #6f7b8a; }
+    footer .heart { color: #ff7289; }
+    .socials { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: auto; padding-top: 26px; }
+    .socials a { width: 42px; height: 42px; text-decoration: none; font-size: 1.15rem; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #ffffff12; border-radius: 50%; background: #08091088; transition: .25s; }
+    .socials a:hover { transform: translateY(-4px) scale(1.12); }
+    .socials .github { color: #f5f5f7; }
+    .socials .linkedin { color: #0a66c2; }
+    .socials .facebook { color: #1877f2; }
+    .socials .instagram { color: #e4405f; }
+    .socials .tiktok { color: #25f4ee; text-shadow: 2px 2px 0 #fe2c55; }
+    @media (max-width: 760px) {
+      .container { width: calc(100% - 34px); }
+      .navbar { height: 72px; }
+      .nav-left { gap: 7px; }
+      .nav-link { padding: 9px 10px; font-size: 10px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .field-row { grid-template-columns: 1fr; gap: 0; }
+      main { padding: 35px 17px 55px; }
+      .panel { padding: 20px; }
+      .profile img { width: 220px; height: 220px; }
+      .footer-content { justify-content: center; text-align: center; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="image.png" alt="ALI">
+      </a>
+      <div class="nav-left">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+        <a class="nav-link" href="whychooseus.html">Why Choose Us</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Let's connect</div>
+    <h1>Get in <span>Touch.</span></h1>
+    <p class="intro">Have an idea or project? Send me a message—I'd love to hear from you.</p>
+    <section class="contact-grid">
+      <aside class="panel profile">
+        <!-- Replace photo1.png with your own photo filename/path -->
+        <img src="p1.png" alt="ALI SHEIKH">
+        <h2>ALI SHEIKH</h2>
+        <p>Web Developer · Available for Projects</p>
+        <div class="contact-details">
+          <div class="contact-detail"><i class="fa-solid fa-envelope"></i><span>afjalalisheikh88@gmail.com</span></div>
+          <div class="contact-detail"><i class="fa-solid fa-location-dot"></i><span>Lumbini, Nepal</span></div>
+        </div>
+        <div class="socials" aria-label="Social media links">
+          <a class="linkedin" href="https://www.linkedin.com/in/aliweb-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="facebook" href="https://www.facebook.com/aliwebdev7" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a class="instagram" href="https://www.instagram.com/afjal_sheikh7/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="tiktok" href="https://www.tiktok.com/@ali_sheikh0240" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </aside>
+      <form class="panel" id="contactForm">
+        <h2>Send a Message</h2>
+        <div class="field-row">
+          <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Enter your name" required></div>
+          <div class="field"><label for="email">Your Email</label><input id="email" name="email" type="email" placeholder="Enter your email" required></div>
+        </div>
+        <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?" required></div>
+        <div class="field">
+          <label for="websiteType">What type of website do you need?</label>
+          <select id="websiteType" name="websiteType" required>
+            <option value="" disabled selected>Select a website type</option>
+            <option>E-commerce Website</option>
+            <option>Portfolio Website</option>
+            <option>Booking / Appointment Website</option>
+            <option>Business Website</option>
+            <option>Restaurant / Food Website</option>
+            <option>Blog / News Website</option>
+            <option>Education / School Website</option>
+            <option>Real Estate Website</option>
+            <option>Landing Page</option>
+            <option>Other / Custom Website</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message..." required></textarea></div>
+        <button class="send-btn" type="submit"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+        <p class="whatsapp-note">This opens WhatsApp with your message ready to send.</p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <a href="index.html" class="brand"><img src="image.png" alt="ALI logo"></a>
+      <a class="email-link" href="mailto:afjalalisheikh88@gmail.com"><i class="fa-regular fa-envelope"></i> afjalalisheikh88@gmail.com</a>
+      <p>© 2026 ALI SHEIKH. Made with <span class="heart">♥</span> and code.</p>
+    </div>
+  </footer>
+  <script>
+    // Replace this with your WhatsApp number in international format, without + or spaces.
+    const whatsappNumber = "9779821035473";
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const websiteType = document.getElementById("websiteType").value;
+      const message = document.getElementById("message").value.trim();
+      const text = `Hello Ali!\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nWebsite Type: ${websiteType}\nMessage: ${message}`;
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
