@@ -416,10 +416,71 @@ color:#6f7b8a
 color:#ff7289
 }
 
-@media(max-width:520px) {
-.footer-content {
-justify-content:center;
-text-align:center;
-flex-direction:column
+@media(max-width:900px) {
+  .project-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px
+  }
 }
+
+@media(max-width:640px) {
+  .container,
+  .footer-content {
+    width:calc(100% - 32px)
+  }
+
+  .navbar {
+    height:auto;
+    min-height:76px;
+    padding:14px 0;
+    flex-wrap:wrap;
+    gap:12px
+  }
+
+  .brand img {
+    width:62px;
+    height:36px
+  }
+
+  .nav-left {
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px
+  }
+
+  .nav-link {
+    padding:10px 8px;
+    text-align:center;
+    font-size:12px
+  }
+
+  main {
+    padding:48px 16px 44px
+  }
+
+  h1 {
+    font-size:clamp(2.2rem,10vw,3rem);
+    letter-spacing:-1.5px
+  }
+
+  .intro {
+    font-size:1rem;
+    margin-bottom:30px
+  }
+
+  .project-grid {
+    grid-template-columns:minmax(0,1fr);
+    gap:16px
+  }
+
+  .card-content {
+    padding:18px
+  }
+
+  .footer-content {
+    justify-content:center;
+    text-align:center;
+    flex-direction:column
+  }
 }
