@@ -7,15 +7,15 @@ const projects = [
     link: "https://yadav-restaurentt.onrender.com"
   },
   {
-    title: "Project 02",
-    description: "My second website project.",
-    image: "images/project-02.jpg",
-    link: "https://your-website-link.com"
+    title: "AL-Sheikh",
+    description: "AL-Sheikh Shoes collection Website",
+    image: "projectt2.jpg",
+    link: "https://alsheikh.ct.ws/index.html"
   },
   {
     title: "Project 03",
     description: "My third website project.",
-    image: "projectt2.jpg",
+    image: "projectt22.jpg",
     link: "https://your-website-link.com"
   },
   {
