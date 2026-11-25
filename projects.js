@@ -13,10 +13,10 @@ const projects = [
     link: "https://alsheikh.ct.ws/index.html"
   },
   {
-    title: "Project 03",
-    description: "My third website project.",
-    image: "projectt22.jpg",
-    link: "https://your-website-link.com"
+    title: "Durgesh Sir Portfolio",
+    description: "Portfolio Website for Introduce own self",
+    image: "durgeshsirport.jpg",
+    link: "https://dc.great-site.net/"
   },
   {
     title: "Project 04",
